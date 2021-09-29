@@ -1,0 +1,249 @@
+@import url('https://fonts.googleapis.com/css2?family=Spartan:wght@500&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+$text-color: hsl(0, 0%, 63%);
+$black: hsl(0, 0%, 0%);
+$white: hsl(0, 0%, 100%);
+$text-head-color: hsl(0, 0%, 27%);
+$font: 12px;
+$weights: 700;
+
+
+body{
+    font-size: $font;
+    font-family: 'Spartan', sans-serif;
+}
+
+main{
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    grid-auto-rows: auto;
+    grid-template-areas: 
+            "a a a a b b b"
+            "c c d d d e e";
+}
+.home{
+    background: url(/images/desktop-image-hero-1.jpg) no-repeat;
+    background-position: center;
+    background-size: cover;
+    transition: 0.5s ease-in;
+    grid-area: a;
+    
+    nav{
+        padding: 3rem 5rem;
+        display: flex;
+        align-items: center;
+
+        .menu, .close{
+            visibility: hidden;
+        }
+    }
+    ul{
+        list-style: none;
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        margin-left: 2rem;
+        
+    }
+    ul li{
+        padding: 0 1rem;
+        font-size: 1rem;
+    }
+
+    ul li a{
+        text-decoration: none;
+        color: $white;
+    }
+}
+
+.service{
+    position: relative;
+    padding: 4rem;
+    grid-area: b;
+    height: calc(100vh - 266px);
+    display: none;
+    h1{
+        font-size: 3vw;
+        font-weight: $weights;
+        padding: 1rem 0;
+        color: $black;
+    }
+    p{
+        font-size: 1.2vw;
+        color: $text-color;
+    }
+    div{
+        padding: 3rem 0;
+    }
+    .shop{
+        padding-top: 30px;
+    }
+    div span{
+        letter-spacing: .4rem;
+        font-size: 2rem;
+        font-weight: $weights;
+        margin-right: 1.2rem;
+        color: $text-head-color;
+    }
+
+    .slider{
+        background-color: $black;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 130px;
+        padding: 1rem 0;
+        display: flex;
+        justify-content: space-around;
+    }
+}
+
+.current{
+    display: block;
+}
+
+.gallery1{
+    grid-area: c;
+    img{
+        width: 100%;
+        height: 100%;
+    }
+}
+
+.gallery2{
+    grid-area: e;
+    img{
+        width: 100%;
+        height: 100%;
+    }
+}
+
+.about{
+    padding: 4rem;
+    grid-area: d;
+    h3{
+        font-size: 1vw;
+        font-weight: $weights;
+        padding: 1rem 0;
+        color: $text-head-color;
+    }
+    p{
+        font-size: 1.2vw;
+        color: $text-color;
+        padding-bottom: 1rem;
+    }
+}
+
+@media(max-width: 1024px){
+    main{
+        display: grid;
+        grid-template-columns: repeat(1fr);
+        grid-auto-rows: auto;
+        grid-template-areas: 
+            "a"
+            "b"
+            "c"
+            "d"
+            "e";
+    }
+
+    .home, .service{
+        height: 40vh;
+        width: 100vw;
+    }
+
+    .service{
+        padding: 1rem 2rem 4rem 2rem;
+        height: auto;
+        h1{
+            font-size: 8vw;
+            font-weight: $weights;
+            padding: 1rem 0;
+            color: $black;
+        }
+        p{
+            font-size: 1.2rem;
+            color: $text-color;
+        }
+       
+        .shop{
+            letter-spacing: .4rem;
+            font-size: 3vw;
+            font-weight: $weights;
+            margin-top: 2rem;
+            color: $text-head-color;
+        }
+        .slider{
+            background-color: $black;
+            position: absolute;
+            bottom: 100%;
+            left: calc(100% - 130px);
+            right: 0;
+            width: 130px;
+            padding: 1rem 0;
+            display: flex;
+            justify-content: space-around;
+        }
+    }
+
+    .about{
+        padding: 2rem 2rem;
+        h3{
+            font-size: 1rem;
+            font-weight: $weights;
+            padding: 1rem 0;
+            color: $text-head-color;
+        }
+        p{
+            font-size: 1.2rem;
+            color: $text-color;
+            padding-bottom: 1rem;
+        }
+    }
+}
+
+@media(max-width: 840px){
+    .home{
+        nav{
+            padding: 2rem 2rem;
+            .menu{
+                visibility: visible;
+                margin-right: 35%;
+            }
+        }
+        ul li{
+            display: none;
+        }
+    }
+
+    .home{
+        .mobile-nav{
+            background-color: $white;
+            padding: 1.5rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            .menu{
+                display: none;
+            }
+            .close{
+                visibility: visible;
+            }
+            .logo{
+                display: none;
+            }
+            ul li{
+                color: $black;
+                display: block;
+            }
+            ul li a{
+                color: $black;
+            }
+        }
+    }
+}
+
