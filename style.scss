@@ -62,8 +62,7 @@ main{
 
 .service{
     position: relative;
-    padding: 2rem;
-    padding-top: 1rem;
+    padding: 2rem 4rem;
     grid-area: b;
     height: calc(100vh - 266px);
     display: none;
@@ -81,7 +80,7 @@ main{
         padding: 3rem 0;
     }
     .shop{
-        padding-top: 5px;
+        padding-top: 20px;
     }
     div span{
         letter-spacing: .4rem;
