@@ -70,7 +70,8 @@ main {
 
 .service {
   position: relative;
-  padding: 4rem;
+  padding: 2rem;
+  padding-top: 1rem;
   -ms-grid-row: 1;
   -ms-grid-column: 5;
   -ms-grid-column-span: 3;
@@ -96,7 +97,7 @@ main {
 }
 
 .service .shop {
-  padding-top: 30px;
+  padding-top: 5px;
 }
 
 .service div span {
