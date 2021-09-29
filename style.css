@@ -24,8 +24,6 @@ main {
   background: url(/images/desktop-image-hero-1.jpg) no-repeat;
   background-position: center;
   background-size: cover;
-  -webkit-transition: 0.5s ease-in;
-  transition: 0.5s ease-in;
   -ms-grid-row: 1;
   -ms-grid-column: 1;
   -ms-grid-column-span: 4;
