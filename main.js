@@ -21,43 +21,45 @@ close.addEventListener("click", ()=>{
 });
 
 
-var activeIndex = 0
+// var activeIndex = 0
 
-document.querySelectorAll(".prev").forEach((prev)=>{
-    prev.addEventListener('click', ()=>{
-        if( activeIndex === 0){
-            activeIndex = service.length-1
-            home.style.backgroundImage = `url(${arrImg[activeIndex]})`
-            toggle()
-        } else{
-            activeIndex-=1
-            home.style.backgroundImage = `url(${arrImg[activeIndex]})`
-            toggle()
-        }
-    })
-})
+// document.querySelectorAll(".prev").forEach((prev)=>{
+//     prev.addEventListener('click', ()=>{
+//         if( activeIndex === 0){
+//             activeIndex = service.length-1
+//             home.style.backgroundImage = `url(${arrImg[activeIndex]})`
+//             toggle()
+//         } else{
+//             activeIndex-=1
+//             home.style.backgroundImage = `url(${arrImg[activeIndex]})`
+//             toggle()
+//         }
+//     })
+// })
 
-document.querySelectorAll(".next").forEach((nex)=>{
-    nex.addEventListener('click', ()=>{
-        if( activeIndex === service.length-1){
-            activeIndex = 0
-            home.style.backgroundImage = `url(${arrImg[activeIndex]})`
-            toggle()
-        } else{
-            activeIndex+=1
-            home.style.backgroundImage = `url(${arrImg[activeIndex]})`
-            toggle()
-        }
-    })
-})
+// document.querySelectorAll(".next").forEach((nex)=>{
+//     nex.addEventListener('click', ()=>{
+//         if( activeIndex === service.length-1){
+//             activeIndex = 0
+//             home.style.backgroundImage = `url(${arrImg[activeIndex]})`
+//             toggle()
+//         } else{
+//             activeIndex+=1
+//             home.style.backgroundImage = `url(${arrImg[activeIndex]})`
+//             toggle()
+//         }
+//     })
+// })
 
-function toggle(){
-    document.querySelector(".current").classList.remove("current")
-    service[activeIndex].classList.add("current")
-}
+// function toggle(){
+//     document.querySelector(".current").classList.remove("current")
+//     service[activeIndex].classList.add("current")
+// }
 
-/*
+
 //Image and text changing
+const prev = document.querySelectorAll('.prev')
+const next = document.querySelectorAll('.next')
 let index = 0
 const nextin = ()=>{
     index++
@@ -66,7 +68,6 @@ const nextin = ()=>{
         toggle()
         //product[index - 1].classList.remove('current')
         //product[index].classList.add('current')
-        
     }
     else{
         home.style.backgroundImage = `url(${arrImg[0]})`
@@ -89,8 +90,8 @@ const previous = ()=>{
     }
 }
 
-next.addEventListener("click", nextin)
-prev.addEventListener("click", previous)
+next.forEach(nextBtn=> {nextBtn.addEventListener("click", nextin)})
+prev.forEach(prevBtn=>{prevBtn.addEventListener("click", previous)});
 
 console.log(product)
 console.log(arrImg)
@@ -100,4 +101,3 @@ function toggle(){
     document.querySelector(".current").classList.remove("current")
     service[index].classList.add("current")
 }
-*/
